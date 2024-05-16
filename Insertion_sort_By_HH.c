@@ -3,23 +3,20 @@
 void insertionSort(int arr[], int n) {
     int i, key, j;
 
-    // Start from the second element (already sorted)
     for (i = 1; i < n; i++) {
-        key = arr[i]; // Element to be inserted
+        key = arr[i]; 
 
-        // Shift elements of arr[0..i-1], that are greater than key, to one position ahead
-        // of their current position
         j = i - 1;
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
             j = j - 1;
         }
-        arr[j + 1] = key; // Insert the shifted key element at its correct position
+        arr[j + 1] = key; 
     }
 }
 
 int main() {
-    int arr[100]; // Array to store elements (adjust size as needed)
+    int arr[100]; 
     int n, i;
 
     printf("Enter the number of elements: ");
